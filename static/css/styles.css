@@ -58,6 +58,17 @@ header li a {
     background-position: center;
 }
 
+.info-container{
+    display: flex;
+    background: white;
+    flex-direction: column;
+    border-radius: 10px;
+    justify-content: center;
+    padding: 25px;
+
+
+}
+
 input[type="file"] {
     display: none;
 }

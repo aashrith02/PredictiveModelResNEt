@@ -1,4 +1,49 @@
 {% extends 'base.html' %}
-{% block title%} Home {% endblock %}
+{% block title%} Home
+{% endblock %}
 {% block content%}
+
+
+<div class = "info-container">
+    <h1>What Is Residual Neural Network (ResNet)?</h1>
+    <br>
+
+    <p>
+        Residual Network (ResNet) is a deep learning model used for computer vision applications. It is a Convolutional Neural Network (CNN) architecture designed to support hundreds or thousands of convolutional layers. Previous CNN architectures were not able to scale to a large number of layers, which resulted in limited performance. However, when adding more layers, researchers faced the “vanishing gradient” problem.
+
+Neural networks are trained through a backpropagation process that relies on gradient descent, shifting down the loss function and finding the weights that minimize it. If there are too many layers, repeated multiplications will eventually reduce the gradient until it “disappears”, and performance saturates or deteriorates with each layer added.
+
+ResNet provides an innovative solution to the vanishing gradient problem, known as “skip connections”. ResNet stacks multiple identity mappings (convolutional layers that do nothing at first), skips those layers, and reuses the activations of the previous layer. Skipping speeds up initial training by compressing the network into fewer layers.
+
+Then, when the network is retrained, all layers are expanded and the remaining parts of the network—known as the residual parts—are allowed to explore more of the feature space of the input image.
+
+Most ResNet models skip two or three layers at a time with nonlinearity and batch normalization in between. More advanced ResNet architectures, known as HighwayNets, can learn “skip weights”, which dynamically determine the number of layers to skip.</p>
+
+<h1>
+    Architecture
+</h1>
+<p>
+    There is a 34-layer plain network in the architecture that is inspired by VGG-19 in which the shortcut connection or the skip connections are added. These skip connections or the residual blocks then convert the architecture into the residual network as shown in the figure below.
+</p>
+<img src="static/archi.png" alt="resnet archi" style ="width:355px; height: 747px;display: block;text-alight:centre;padding-left:100px">
+<h1>
+    Performance:
+</h1>
+    <p>
+    ResNet improves performances in 3 ways:
+<ul>
+1) ResNet Deep Learning uses a bottleneck design of residual blocks that increase network performances.
+    <br>
+    <br>
+2) ResNet protects the network from vanishing gradient problems by using Identity Connection.
+    <br>
+    <br>
+3) ResNet solves the problem of covariate shift by using Batch Normalization which adjusts the input layer and makes an accelerated network performance.
+</ul>
+    </p>
+
+
+</div>
+
+
 {% endblock %}
